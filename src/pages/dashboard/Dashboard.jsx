@@ -3,6 +3,7 @@ import textbox from "../../assets/textbox.png";
 import usertalk from "../../assets/user_talk.png";
 import avatar from "../../assets/avatar.png";
 import KelolaKonten from "../kontent/KelolaKonten";
+import Proyek from "../proyek/Proyek";
 
 export default function Dashboard() {
   return (
@@ -50,7 +51,9 @@ export default function Dashboard() {
       {/*  */}
 
       {/* Kelola Content */}
-      <div className="w-full h-10 bg-red-300 mt-2">Proyek</div>
+      <div className="w-full h-auto  ">
+        <Proyek />
+      </div>
       {/*  */}
     </div>
   );

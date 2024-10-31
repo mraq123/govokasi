@@ -10,6 +10,7 @@ export default {
         abu: "#ECECEC",
         ungu: "#703BE7",
         orange: "#FE846F",
+        putih: "#ffffff",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
@@ -22,12 +23,16 @@ export default {
         ht: "12px",
         ds: "32px",
         hh: "14px",
+        hs: "11px",
       },
       backgroundImage: {
         "custom-gradient":
           "linear-gradient(90deg, #F27121, #EE593B, #E94057, #AF3E9C, #703BE7)",
         "custom-gradient2":
           "linear-gradient(90deg, #6636D2, #6636D2, #4257E9, #2472FC)",
+      },
+      height: {
+        150: "110vh",
       },
     },
   },

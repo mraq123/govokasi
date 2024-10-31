@@ -8,6 +8,7 @@ import Proyek from "./pages/proyek/Proyek";
 import AiTools from "./pages/aitools/AiTools";
 import Avatar from "./pages/avatar/Avatar";
 import BrandKit from "./pages/brandKit/BrandKit";
+import Test from "./pages/test/Test";
 
 function App() {
   return (

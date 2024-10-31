@@ -7,8 +7,8 @@ export default function Sidebar() {
   const { pathname } = useLocation();
 
   return (
-    <div className="h-screen w-1/5 bg-[#ffffff] flex flex-col p-5 justify-evenly border-r-2 border-[#ECECEC]">
-      <div className="mb-auto flex flex-col">
+    <div className="min-h-screen w-1/5 bg-[#ffffff] flex flex-col p-5 justify-start gap-5  border-r-2 border-[#ECECEC] ">
+      <div className="flex flex-col h-auto ">
         <img src={Logo} alt="" />
         <button className="bg-[#703BE7] text-white p-2 rounded-xl flex items-center justify-center gap-2 mt-12">
           <span className="text-base font-semibold font-poppins">
@@ -21,20 +21,19 @@ export default function Sidebar() {
       </div>
 
       {/* Sidebar Menu Top */}
-      <div className="mb-10">
-        <div>
-          {SidebarMenuTop.map((item) => (
-            <SidebarLinks
-              key={item.key}
-              item={item}
-              isActive={pathname === item.path}
-            />
-          ))}
-        </div>
+
+      <div className="flex flex-col gap-2 mt-10">
+        {SidebarMenuTop.map((item) => (
+          <SidebarLinks
+            key={item.key}
+            item={item}
+            isActive={pathname === item.path}
+          />
+        ))}
       </div>
 
       {/* Sidebar Menu Bottom */}
-      <div className="flex flex-col">
+      <div className="flex flex-col mt-16">
         {SidebarMenuBottom.map((item) => (
           <SidebarLinks
             key={item.key}

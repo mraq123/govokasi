@@ -5,7 +5,7 @@ import foto from "../assets/foto.png";
 
 export default function Layout() {
   return (
-    <div className="flex flex-row w-screen h-screen overflow-hidden">
+    <div className="flex flex-row w-screen h-auto overflow-hidden">
       <Sidebar />
       {/* header components */}
       <div className="w-full h-auto p-2">
