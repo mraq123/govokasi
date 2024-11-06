@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Logo from "../assets/Logo.png";
 import Circle from "../assets/circle_white.png";
 import { SidebarMenuBottom, SidebarMenuTop } from "../lib/SidebarMenu";
@@ -33,7 +33,7 @@ export default function Sidebar() {
       </div>
 
       {/* Sidebar Menu Bottom */}
-      <div className="flex flex-col mt-16">
+      <div className="flex flex-col mt-auto">
         {SidebarMenuBottom.map((item) => (
           <SidebarLinks
             key={item.key}
@@ -48,16 +48,25 @@ export default function Sidebar() {
 
 // Function Links
 function SidebarLinks({ item, isActive }) {
+  const navigate = useNavigate();
   const isLogout = item.label === "Logout";
 
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("userId");
+    localStorage.removeItem("userData");
+    navigate("/login");
+    window.location.reload();
+  };
   return (
-    <Link to={item.path}>
+    <Link to={isLogout ? "#" : item.path}>
       <button
+        onClick={isLogout ? handleLogout : null}
         className={`w-full rounded-xl pl-4 flex gap-3 items-center py-3 text-sm ${
           isActive
             ? "bg-[#F1EBFB] text-[#8D62EC] font-semibold font-poppins"
             : isLogout
-            ? "text-red-600 font-medium font-poppins" // Apply red color for Logout
+            ? "text-red-600 font-medium font-poppins"
             : "text-black font-medium font-poppins"
         }`}
         style={{ fontSize: "14px" }}

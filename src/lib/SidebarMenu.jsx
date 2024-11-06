@@ -6,6 +6,7 @@ import avatar from "../assets/avatar.png";
 import brand from "../assets/brandkit.png";
 import logout from "../assets/logout.png";
 import settings from "../assets/settings.png";
+import usericon from "../assets/user.png";
 
 export const SidebarMenuTop = [
   {
@@ -48,6 +49,13 @@ export const SidebarMenuTop = [
     label: "Brand Kit",
     path: "/brandkit",
     icon: brand,
+  },
+
+  {
+    key: "profile",
+    label: "Profile",
+    path: "/profile",
+    icon: usericon,
   },
 ];
 
