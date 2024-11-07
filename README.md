@@ -26,3 +26,4 @@ Currently, two official plugins are available:
 - Portected Route
 - Layout
 - Middleware
+- API AI NVIDIA UNTUK BUTTON IMAGE

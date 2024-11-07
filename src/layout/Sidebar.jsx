@@ -10,13 +10,19 @@ export default function Sidebar() {
     <div className="min-h-screen w-1/5 bg-[#ffffff] flex flex-col p-5 justify-start gap-5  border-r-2 border-[#ECECEC] ">
       <div className="flex flex-col h-auto ">
         <img src={Logo} alt="" />
+
         <button className="bg-[#703BE7] text-white p-2 rounded-xl flex items-center justify-center gap-2 mt-12">
-          <span className="text-base font-semibold font-poppins">
-            Buat Video
-          </span>
-          <span>
-            <img className="text-white" src={Circle} alt="" />
-          </span>
+          <Link
+            to={"/createvideo"}
+            className="w-full flex justify-center items-center gap-2"
+          >
+            <span className="text-base font-semibold font-poppins">
+              Buat Image
+            </span>
+            <span>
+              <img className="text-white" src={Circle} alt="" />
+            </span>
+          </Link>
         </button>
       </div>
 

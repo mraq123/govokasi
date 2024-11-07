@@ -2,6 +2,8 @@ import { useState } from "react";
 import step1 from "../../assets/step1.png";
 import step2 from "../../assets/step2.png";
 import step3 from "../../assets/step3.png";
+import { Link } from "react-router-dom";
+import left from "../../assets/leftline.png";
 
 export default function DetailProyek() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -22,7 +24,12 @@ export default function DetailProyek() {
 
   return (
     <div className="w-full h-screen  p-5">
-      <h1 className="font-bold font-poppins mb-4">Detail Proyek</h1>
+      <div className="flex">
+        <Link to={"/proyek"}>
+          <img src={left} alt="" />
+        </Link>
+        <h1 className="font-bold font-poppins mb-4">Detail Proyek</h1>
+      </div>
 
       {/* Step Content */}
       <div className="flex justify-center items-center flex-col">

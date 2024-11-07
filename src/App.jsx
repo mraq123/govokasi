@@ -15,6 +15,7 @@ import Profile from "./pages/profile/Profile";
 import DetailKelolaKontent from "./pages/kontent/DetailKelolaKontent";
 import AiToolsDetail from "./pages/aitools/AiToolsDetail";
 import DetailProyek from "./pages/proyek/DetailProyek";
+import CreateVideo from "./pages/createVideo/CreateVideo";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
           <Route path="/pengaturan" element={<Settings />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/detailkelolakonten" element={<DetailKelolaKontent />} />
+          <Route path="/createvideo" element={<CreateVideo />} />
           <Route path="/detailaitools" element={<AiToolsDetail />} />
           <Route path="/detailproyek" element={<DetailProyek />} />
         </Route>

@@ -46,7 +46,7 @@ export const getLoggedInUserData = async () => {
       },
     });
 
-    return response.data; // Mengembalikan data lengkap pengguna
+    return response.data;
   } catch (error) {
     console.error("Gagal mendapatkan data pengguna:", error);
     return null;
