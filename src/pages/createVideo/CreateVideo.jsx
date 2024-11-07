@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import cowImage from "../../assets/cow.png";
+import robot from "../../assets/robotai.jpg";
 import dancingCat from "../../assets/cat-dancing.gif";
 import drawingCat from "../../assets/drawing.gif";
 
@@ -67,7 +67,7 @@ export default function CreateVideo() {
         <div className="mb-4">
           <img
             className="mx-auto max-w-full h-40 rounded-lg"
-            src={generating ? drawingCat : image ? image : cowImage}
+            src={generating ? drawingCat : image ? image : robot}
             alt="Generated"
           />
         </div>
